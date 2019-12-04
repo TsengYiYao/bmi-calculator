@@ -13,8 +13,14 @@ class _InputPageState extends State<InputPage> {
         centerTitle: true,
         title: Text('BMI CALCULATOR'),
       ),
-      body: Center(
-        child: Text('Body Text'),
+      body: Container(
+        margin: EdgeInsets.all(15),
+        decoration: BoxDecoration(
+          color: Color(0XFF1D1E33),
+          borderRadius: BorderRadius.circular(5),
+        ),
+        height: 200,
+        width: 170,
       ),
 //      floatingActionButton: Theme(
 //        data: ThemeData(accentColor: Colors.purple),
