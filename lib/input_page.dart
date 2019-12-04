@@ -13,14 +13,73 @@ class _InputPageState extends State<InputPage> {
         centerTitle: true,
         title: Text('BMI CALCULATOR'),
       ),
-      body: Container(
-        margin: EdgeInsets.all(15),
-        decoration: BoxDecoration(
-          color: Color(0XFF1D1E33),
-          borderRadius: BorderRadius.circular(5),
+      body: SafeArea(
+        child: Column(
+          children: <Widget>[
+            Expanded(
+              child: Row(
+                children: <Widget>[
+                  Expanded(
+                    child: Container(
+                      margin: EdgeInsets.all(15),
+                      decoration: BoxDecoration(
+                        color: Color(0XFF1D1E33),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+//                    height: 200,
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      margin: EdgeInsets.all(15),
+                      decoration: BoxDecoration(
+                        color: Color(0XFF1D1E33),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+//                    height: 200,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Expanded(
+              child: Container(
+                margin: EdgeInsets.all(15),
+                decoration: BoxDecoration(
+                  color: Color(0XFF1D1E33),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+//                height: 200,
+              ),
+            ),
+            Expanded(
+              child: Row(
+                children: <Widget>[
+                  Expanded(
+                    child: Container(
+                      margin: EdgeInsets.all(15),
+                      decoration: BoxDecoration(
+                        color: Color(0XFF1D1E33),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+//                    height: 200,
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      margin: EdgeInsets.all(15),
+                      decoration: BoxDecoration(
+                        color: Color(0XFF1D1E33),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+//                    height: 200,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
         ),
-        height: 200,
-        width: 170,
       ),
 //      floatingActionButton: Theme(
 //        data: ThemeData(accentColor: Colors.purple),
