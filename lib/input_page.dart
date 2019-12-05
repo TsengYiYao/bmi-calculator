@@ -72,6 +72,9 @@ class _InputPageState extends State<InputPage> {
                 cardChild: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
+                    SizedBox(
+                      height: 2,
+                    ),
                     Text(
                       'HEIGHT',
                       style: kLabelTextStyle,
@@ -91,17 +94,27 @@ class _InputPageState extends State<InputPage> {
                         ),
                       ],
                     ),
-                    Slider(
-                      value: height.toDouble(),
-                      min: 120,
-                      max: 220,
-                      activeColor: Color(0xFFEB1555),
-                      inactiveColor: Color(0xFF8C8E98),
-                      onChanged: (double newValue) {
-                        setState(() {
-                          height = newValue.round();
-                        });
-                      },
+                    SliderTheme(
+                      data: SliderTheme.of(context).copyWith(
+                        inactiveTrackColor: Color(0xFF8C8E98),
+                        activeTrackColor: Colors.white,
+                        thumbColor: Color(0xFFFB1555),
+                        overlayColor: Color(0x15FB1555),
+                        thumbShape:
+                            RoundSliderThumbShape(enabledThumbRadius: 15),
+                        overlayShape:
+                            RoundSliderOverlayShape(overlayRadius: 30),
+                      ),
+                      child: Slider(
+                        value: height.toDouble(),
+                        min: 120,
+                        max: 220,
+                        onChanged: (double newValue) {
+                          setState(() {
+                            height = newValue.round();
+                          });
+                        },
+                      ),
                     ),
                   ],
                 ),
