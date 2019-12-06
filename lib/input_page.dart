@@ -4,6 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'constants.dart';
 import 'reusable_card.dart';
 import 'input_content.dart';
+import 'bottom_button.dart';
 
 enum Gender {
   male,
@@ -33,7 +34,7 @@ class _InputPageState extends State<InputPage> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Expanded(
-                flex: kBlockRation,
+                flex: kBlockRatio,
                 child: Row(
                   children: <Widget>[
                     Expanded(
@@ -71,7 +72,7 @@ class _InputPageState extends State<InputPage> {
                   ],
                 )),
             Expanded(
-              flex: kBlockRation,
+              flex: kBlockRatio,
               child: ReusableCard(
                 color: kActiveCardColor,
                 cardChild: Column(
@@ -126,7 +127,7 @@ class _InputPageState extends State<InputPage> {
               ),
             ),
             Expanded(
-                flex: kBlockRation,
+                flex: kBlockRatio,
                 child: Row(
                   children: <Widget>[
                     Expanded(
@@ -221,20 +222,12 @@ class _InputPageState extends State<InputPage> {
                 )),
             Expanded(
               flex: 2,
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => ResultsPage()),
-                  );
+              child: BottomButton(
+                buttonTitle: 'CALCUTATE',
+                onTab: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => ResultsPage()));
                 },
-                child: Container(
-                  child: Text('CALCUTATE'),
-                  color: kBottomContainerColor,
-                  margin: EdgeInsets.only(top: 10),
-                  width: double.infinity,
-                  //height: kBottomContainerHeight,
-                ),
               ),
             ),
           ],
